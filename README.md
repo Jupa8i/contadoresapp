@@ -5,7 +5,7 @@ Aplicación que permite agregar, ordenar y eliminar contadores de la lista.
 
 ![Logo](https://i.ibb.co/p0NpQqZ/nuxt-sm.png)
 
-## Caracteristicas
+## Caracteristícas
 
 - Nuxt3
 - Vuex (localStorage, sessionStorage), Seguridad: datos encriptados
