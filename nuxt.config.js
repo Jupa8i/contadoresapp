@@ -1,5 +1,5 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  // Global page headers:
   head: {
     title: 'contadoresapp',
     meta: [
@@ -13,43 +13,79 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS:
   css: [
+    '~assets/css/main.css'
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  styleResources: {
+    scss: [
+      '~assets/scss/main.scss',
+    ]
+  },
+
+  // Plugins to run before rendering page:
   plugins: [
+    '~plugins/vue-js-modal',
+    '~plugins/vee-validate',
+    '~plugins/floating-vue',
+    '~plugins/filters',
+    { src: '~plugins/vue-js-toggle-button', ssr: false }
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto import components:
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  // Modules for dev and build (recommended):
   buildModules: [
+    '@nuxtjs/style-resources',
+
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  // Modules:
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-fontawesome',
+    '@nuxtjs/toast',
+    ['nuxt-vuex-localstorage', {
+      mode: 'debug',
+      localStorage: ['localStorage'],
+      sessionStorage: ['sessionStorage']
+    }]
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  // Axios module configuration:
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    // Workaround to avoid enforcing hard-coded localhost:3000:
     baseURL: '/',
   },
 
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  // PWA module configuration:
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'es'
     }
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faHome', 'faTimes', 'faPlus', 'faMinus', 'faTrash', 'faEraser']
+      }
+    ]
+  },
+
+  toast: {
+    position: 'top-center',
+    duration: '3000'
+  },
+
+
+  // Build Configuration:
   build: {
+    transpile: ["vee-validate/dist/rules"],
   }
 }
