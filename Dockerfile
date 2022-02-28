@@ -8,6 +8,7 @@ ENV HOST 0.0.0.0
 
 COPY package*.json ./
 
+RUN npm install -g sass
 RUN npm install
 
 # Copy local nuxt code to the container
