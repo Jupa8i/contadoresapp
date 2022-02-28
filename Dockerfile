@@ -1,7 +1,6 @@
 # base node image
-FROM node:10
-RUN apt-get update -y
-RUN apt-get install -y python3\.6
+FROM nikolaik/python-nodejs:latest
+
 WORKDIR /usr/src/app
 
 ENV PORT 8080
