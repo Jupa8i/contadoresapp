@@ -40,6 +40,7 @@ export default {
     onlyNumber,
     deleteContador_(id) {
       this.deleteContador(id);
+      this.$toast.success("Contador eliminado");
     },
     restarContador_(contador) {
       if (contador.valor == 0) {
