@@ -81,14 +81,14 @@
   height: 27px;
 
   @media (max-width: $md) {
+    height: auto;
     margin-left: auto;
     width: 100%;
     text-align: center;
     flex-direction: column-reverse;
 
     .btn-icon {
-      margin: 0;
-      margin-bottom: 15px;
+      margin: 5px 0 10px;
     }
   }
 }
