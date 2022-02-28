@@ -1,7 +1,7 @@
 # base node image
 FROM node:10
-RUN sudo apt-get update -y
-RUN sudo apt-get install -y python3.6
+RUN apt-get update -y
+RUN apt-get install -y python3.6
 
 WORKDIR /usr/src/app
 
