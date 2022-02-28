@@ -14,7 +14,7 @@ RUN npm install -g sass
 COPY . .
 
 # Build production app
-RUN npm run build sass assets/SCSS/main.scss assets/CSS/main.css
+RUN npm run build
 
 # Start the service
 CMD npm start
