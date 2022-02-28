@@ -227,7 +227,7 @@
 }
 @media (max-width: 992px) {
   .add-contador-container {
-    height: calc(100vh - 359px);
+    height: calc(100vh - 370px);
   }
 }
 
