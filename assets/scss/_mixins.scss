@@ -1,0 +1,47 @@
+/* --------------------------------- SHADOWS -------------------------------- */
+@mixin shadowDefault($color) {
+  -moz-box-shadow: 0px 0px 4px 1px $color;
+  -webkit-box-shadow: 0px 0px 4px 1px $color;
+  box-shadow: 0px 0px 4px 1px $color;
+}
+
+@mixin innerShadow {
+  -webkit-box-shadow: inset 0px -62px 35px -73px rgb(0 0 0 / 75%);
+  -moz-box-shadow: inset 0px -62px 35px -73px rgba(0,0,0,0.75);
+  box-shadow: inset 0px -62px 35px -73px rgb(0 0 0 / 75%);
+}
+
+/* ------------------------------- CONTADORES ------------------------------- */
+@mixin shadowContainer($color) {
+  -moz-box-shadow: 2px 2px 4px 1px $color;
+  -webkit-box-shadow: 2px 2px 4px 1px $color;
+  box-shadow: 2px 2px 4px 1px $color;
+}
+
+@mixin backgroundContainer {
+  background-image: linear-gradient($white, #ececec);
+  box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+}
+
+/* ------------------------------ COLLAPSE NAV ------------------------------ */
+
+@mixin collapseAnimate {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin transformRotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
