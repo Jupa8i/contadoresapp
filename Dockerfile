@@ -15,6 +15,7 @@ COPY . .
 
 # Build production app
 RUN npm run build
+RUN npm rebuild node-sass --force
 
 # Start the service
 CMD npm start
