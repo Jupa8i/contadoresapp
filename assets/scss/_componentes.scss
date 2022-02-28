@@ -77,9 +77,8 @@
 }
 
 .btn-clear-contenedor-container {
-  position: relative;
-  top: 1px;
   margin-left: 15px;
+  height: 27px;
 
   @media (max-width: $md) {
     margin-left: auto;
