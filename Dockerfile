@@ -13,9 +13,8 @@ RUN npm install -g sass
 # Copy local nuxt code to the container
 COPY . .
 
-RUN sass assets/SCSS/main.scss assets/CSS/main.css
 # Build production app
-RUN npm run build
+RUN npm run build sass assets/SCSS/main.scss assets/CSS/main.css
 
 # Start the service
 CMD npm start
