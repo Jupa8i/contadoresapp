@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "node-sass": "sass assets/SCSS/main.scss assets/CSS/main.css"
+    "node-sass": "node-sass assets/SCSS/main.scss assets/CSS/main.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
