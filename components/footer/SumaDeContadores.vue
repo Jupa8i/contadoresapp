@@ -4,7 +4,7 @@
       <label for="suma_contadores">Suma contadores ({{ getLocalStorage.contadores.length | NUM }}) </label>
       <input
         v-model="getSumaContadores"
-        disabled
+        readonly
         type="text"
         id="suma_contadores"
         class="input-small"
@@ -17,7 +17,6 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  data: () => ({}),
   computed: {
     ...mapGetters(["getSumaContadores", "getLocalStorage"]),
   },

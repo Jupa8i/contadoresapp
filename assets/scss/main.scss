@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'componentes';
 @import 'contador';
 
 /* --------------------------------- GENERAL -------------------------------- */
@@ -179,7 +180,7 @@ footer {
   .footer-container {
     display: flex;
     justify-content: space-between;
-    margin: 10px 15px;
+    padding: 10px 15px;
 
     .form-group label {
       color: $white;
@@ -190,9 +191,15 @@ footer {
     }
 
     @media (max-width: $md) {
+
       flex-flow: column-reverse;
-      margin-bottom: 15px;
+      padding-bottom: 15px;
     }
+  }
+
+  @media (max-width: $md) {
+    position: relative;
+    margin-top: 20px;
   }
 
 }
@@ -200,7 +207,6 @@ footer {
 /* ---------------------------------- MODAL --------------------------------- */
 .vm--modal {
   .btn-close {
-    width: 13px;
     position: absolute;
     right: 0;
     color: $grey;
@@ -251,4 +257,211 @@ footer {
   margin: 15px;
   display: flex;
   place-content: space-between;
+}
+
+
+/* ------------------------------ TRANSICIONES ------------------------------ */
+/* ---------------------------------- FADE ---------------------------------- */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+  overflow: hidden;
+}
+
+.slide-fade-leave-active {
+  display: none !important;
+}
+
+
+/* -------------------------------- LIST ITEM ------------------------------- */
+.list-item-enter-active,
+.list-item-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+  transform-origin: left center;
+}
+
+.list-item-enter,
+.list-item-leave-to {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.list-item-leave-active {
+  position: absolute;
+}
+
+.list-item-move {
+  transition: transform .4s linear .1s;
+}
+
+
+/* ---------------------------------- LIST ---------------------------------- */
+.list-enter-active,
+.list-leave-active,
+.list-move {
+  transition: 500ms cubic-bezier(0.59, 0.12, 0.34, 0.95);
+  transition-property: opacity, transform;
+}
+
+.list-enter {
+  opacity: 0;
+  transform: translateX(50px) scaleY(0.5);
+}
+
+.list-enter-to {
+  opacity: 1;
+  transform: translateX(0) scaleY(1);
+}
+
+.list-leave-active {
+  position: absolute;
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: center top;
+}
+
+
+
+/* ----------------------------- CLASESS CUSTOM ----------------------------- */
+.w-100 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.d-flex-nw {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.d-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.d-between {
+  display: flex;
+  place-content: space-between;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block-resp {
+  display: none !important;
+
+  @media (max-width: $md) {
+    display: block !important;
+  }
+}
+
+.d-custom-001 {
+  position: absolute;
+  right: 15px;
+  margin: 3px 0px !important;
+
+  @media (max-width: $md) {
+    position: relative;
+    right: auto;
+    margin: 15px !important;
+  }
+}
+
+.f-nw {
+  flex-flow: row wrap
+}
+
+.a-center {
+  align-self: center;
+  align-items: center;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ma-1 {
+  margin: 10px;
+}
+
+.ma-2 {
+  margin: 15px;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 15px !important;
+}
+
+.mt-2 {
+  margin-top: 15px;
+}
+
+@media (max-width: $md) {
+  .d-none-resp {
+    display: none !important;
+  }
+
+  .d-line-block {
+    display: inline-block;
+  }
+
+  .w-100-resp {
+    width: 100% !important;
+  }
+
+  .ma-1-resp {
+    margin: 10px;
+  }
+
+  .mb-1-resp {
+    margin-bottom: 10px;
+  }
+
+  .mt-2-resp {
+    margin-top: 15px;
+  }
+
+  .mt-3-resp {
+    margin-top: 20px;
+  }
+
+  .mw-240 {
+    max-width: 240px;
+  }
+
+
+}
+
+@media (min-width: $md) {
+  .mr-1-desk {
+    margin-right: 15px;
+  }
 }

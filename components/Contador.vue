@@ -7,7 +7,7 @@
 
     <div class="d-flex operator-container">
       <div class="contador-operador d-flex-nw a-center w-100-resp mb-1-resp">
-        <fa @click="restarContador_(contador)" icon="minus" class="btn-icon mr-1" />
+        <fa @click="restarContador_(contador)" icon="minus" class="btn-icon fa-icon mr-1" />
         <div class="form-group mb-0">
           <input
             v-model="contador.valor"
@@ -21,10 +21,10 @@
             placeholder="Número"
           />
         </div>
-        <fa @click="sumarContador_(contador)" icon="plus" class="btn-icon ml-1" />
+        <fa @click="sumarContador_(contador)" icon="plus" class="btn-icon fa-icon ml-1" />
       </div>
       <div class="a-center btn-clear-contenedor-container">
-        <fa @click="deleteContador_(contador.id)" icon="trash" class="btn-icon mr-1" />
+        <fa @click="deleteContador_(contador.id)" icon="trash" class="btn-icon fa-icon mr-1" />
       </div>
     </div>
   </div>

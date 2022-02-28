@@ -30,7 +30,7 @@
 
     <div class="form-group" v-tooltip="'Limpiar filtros (sessionStorage)'">
       <a @click="clearSessionStorage_" class="btn btn-primary btn-small btn-header-clear">
-        <fa icon="eraser" />
+        <fa icon="eraser" class="fa-icon fa-icon" />
       </a>
     </div>
   </div>

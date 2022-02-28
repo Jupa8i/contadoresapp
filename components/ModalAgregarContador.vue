@@ -1,9 +1,7 @@
 <template>
   <div>
     <modal name="agregar-contador" :width="350" :height="280" :adaptive="true">
-      <span class="btn-close">
-        <fa @click="hide" icon="times" />
-      </span>
+      <fa @click="hide" icon="times" class="btn-close fa-icon" />
 
       <div class="modal-content">
         <h2>Crear contador</h2>
@@ -19,7 +17,7 @@
                   name="nombre"
                   placeholder="Nombre contador"
                   autocomplete="off"
-                  maxlength="30"
+                  maxlength="20"
                 />
                 <FormError :error="errors[0]"> </FormError>
               </div>
@@ -27,7 +25,7 @@
 
             <div class="btn-container">
               <a @click="hide" class="btn btn-secondary btn-cancel">Cancelar</a>
-              <a @click="handleSubmit(onSubmit)" class="btn btn-primary mb-1">Agregar</a>
+              <a @click="handleSubmit(onSubmit)" :class="[!form.nombre.length ? 'disabled-btn' : '']" class="btn btn-primary mb-1">Agregar</a>
             </div>
           </form>
         </ValidationObserver>
