@@ -8,13 +8,14 @@ ENV HOST 0.0.0.0
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install -g sass
 
 # Copy local nuxt code to the container
 COPY . .
 
+RUN sass --watch assets/SCSS/main.scss assets/CSS/main.css
 # Build production app
-RUN npm run build node-sass
+RUN npm run build
 
 # Start the service
 CMD npm start
