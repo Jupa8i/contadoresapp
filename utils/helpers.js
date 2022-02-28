@@ -1,6 +1,4 @@
 export function applyFilter(contador, value) {
-
-  console.log(contador, value)
   let filtros = ["nombre", "valor"]
   let val = false
   filtros.forEach((filtro) => {

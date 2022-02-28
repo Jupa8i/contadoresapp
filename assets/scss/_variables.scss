@@ -6,7 +6,6 @@ $grey: #b2b2b2;
 $dark-grey: #333;
 $black-3: rgba(0, 0, 0, .3);
 $font-size-lg: 18px;
-
 $bg-color: #E5E5F7;
 $secondary-bg-color: #d5d5d5;
 
@@ -68,10 +67,6 @@ $x-sm: 368px;
 .f-nw {
   flex-flow: row wrap
 }
-
-
-
-
 
 .a-center {
   align-self: center;
@@ -150,10 +145,7 @@ $x-sm: 368px;
   .mr-1-desk {
     margin-right: 15px;
   }
-
-
 }
-
 
 /* --------------------------------- BOTONES -------------------------------- */
 .btn {
@@ -206,8 +198,6 @@ $x-sm: 368px;
     width: 100%;
     height: 45px;
   }
-
-
 }
 
 .btn-small.btn-header-clear {
@@ -235,20 +225,20 @@ $x-sm: 368px;
 
 .btn-clear-contenedor-container {
   position: relative;
-    top: 1px;
-    margin-left: 15px;
+  top: 1px;
+  margin-left: 15px;
 
-    @media (max-width: $md) {
-      margin-left: auto;
-      width: 100%;
-      text-align: center;
-      flex-direction: column-reverse;
-      .btn-icon {
-        // width: 100%;
-        margin: 0;
-        margin-bottom: 15px;
-      }
+  @media (max-width: $md) {
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    flex-direction: column-reverse;
+
+    .btn-icon {
+      margin: 0;
+      margin-bottom: 15px;
     }
+  }
 }
 
 
@@ -280,7 +270,6 @@ $x-sm: 368px;
     @media (max-width: $md) {
       width: 100%;
     }
-
   }
 
   .count-number {
@@ -343,7 +332,9 @@ $x-sm: 368px;
   transition: opacity 0.3s, transform 0.3s;
   transform-origin: left center;
 }
-.list-item-enter, .list-item-leave-to /* .list-leave-active for <2.1.8 */ {
+
+.list-item-enter,
+.list-item-leave-to {
   opacity: 0;
   transform: scale(0.5);
 }
@@ -357,11 +348,7 @@ $x-sm: 368px;
 }
 
 
-
-
-
-
-
+/* ---------------------------------- LIST ---------------------------------- */
 .list-enter-active,
 .list-leave-active,
 .list-move {

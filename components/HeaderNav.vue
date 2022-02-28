@@ -12,7 +12,7 @@
 
     <div class="header-nav">
       <div class="a-center w-100 d-line-block">
-        <no-ssr>
+        <client-only>
           <toggle-button
             :width="130"
             :height="35"
@@ -32,7 +32,7 @@
             :labels="{ checked: 'Desc', unchecked: 'Asc' }"
             class="toggle-two"
           />
-        </no-ssr>
+        </client-only>
       </div>
     </div>
   </div>

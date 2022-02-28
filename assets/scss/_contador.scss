@@ -12,7 +12,7 @@
     flex-direction: row;
 
     @media (max-width: $md) {
-      flex-direction:column-reverse;
+      flex-direction: column-reverse;
 
     }
   }
@@ -31,14 +31,11 @@
     position: relative;
   }
 
-
-
   .contador {
     position: absolute;
     transition: all 13s ease;
-  -webkit-transition: all 13s ease;
-  //   transition: all 1s ease;
-  // -webkit-transition: all 1s ease;
+    -webkit-transition: all 13s ease;
+
   }
 
   @media (max-width: $md) {

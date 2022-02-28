@@ -33,6 +33,5 @@ export default {
     FiltrarContadores,
     OrdenarContadores,
   },
-  data: () => ({}),
 };
 </script>

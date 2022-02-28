@@ -40,7 +40,6 @@
 import { mapGetters, mapMutations } from "vuex";
 import { onlyNumber } from "@/utils/helpers";
 export default {
-  data: () => ({}),
   computed: {
     ...mapGetters(["getSessionStorage"]),
     valor: {

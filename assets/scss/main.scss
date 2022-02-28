@@ -24,7 +24,6 @@ body {
 
 .main {
   width: 100%;
-  // @include innerShadow;
 }
 
 
@@ -112,15 +111,16 @@ body {
 
 .operador-filtro {
   position: relative;
-    top: 9px;
-    margin-right: 2px;
-    font-size: 30px;
+  top: 9px;
+  margin-right: 2px;
+  font-size: 30px;
 }
 
 /* ------------------------------ COLLAPSE NAV ------------------------------ */
 
 #collapse_nav {
   display: none;
+
   &:checked {
 
     ~.navbar-collapse {
@@ -200,6 +200,7 @@ footer {
 /* ---------------------------------- MODAL --------------------------------- */
 .vm--modal {
   .btn-close {
+    width: 13px;
     position: absolute;
     right: 0;
     color: $grey;

@@ -28,7 +28,7 @@ export default {
   plugins: [
     '~plugins/vue-js-modal',
     '~plugins/vee-validate',
-    '~plugins/floating-vue',
+    '~plugins/v-tooltip',
     '~plugins/filters',
     { src: '~plugins/vue-js-toggle-button', ssr: false }
   ],
@@ -49,7 +49,6 @@ export default {
     'nuxt-fontawesome',
     '@nuxtjs/toast',
     ['nuxt-vuex-localstorage', {
-      mode: 'debug',
       localStorage: ['localStorage'],
       sessionStorage: ['sessionStorage']
     }]

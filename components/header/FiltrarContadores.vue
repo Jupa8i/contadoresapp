@@ -16,7 +16,6 @@
 <script>
 import { mapGetters, mapMutations } from "vuex";
 export default {
-  data: () => ({}),
   computed: {
     ...mapGetters(["getSessionStorage"]),
     operador: {

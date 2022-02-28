@@ -1,7 +1,10 @@
 <template>
   <div>
     <modal name="agregar-contador" :width="350" :height="280" :adaptive="true">
-      <fa @click="hide" icon="times" class="btn-close" />
+      <span class="btn-close">
+        <fa @click="hide" icon="times" />
+      </span>
+
       <div class="modal-content">
         <h2>Crear contador</h2>
 
@@ -34,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   data: () => ({
@@ -42,9 +45,7 @@ export default {
       nombre: "",
     },
   }),
-  mounted() {
-    this.show();
-  },
+
   watch: {
     "form.nombre"(val) {
       if (val.length > 1) {
@@ -54,7 +55,6 @@ export default {
   },
   methods: {
     ...mapActions(["addContador"]),
-
     show() {
       this.$modal.show("agregar-contador");
     },
