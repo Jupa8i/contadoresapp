@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "npm rebuild node-sass && nuxt start",
     "generate": "nuxt generate",
     "node-sass": "sass assets/SCSS/main.scss assets/CSS/main.css"
   },

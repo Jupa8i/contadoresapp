@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build production app
-RUN npm run build node-sass
+RUN npm run build
 
 # Start the service
 CMD npm start
