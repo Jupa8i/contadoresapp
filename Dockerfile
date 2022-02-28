@@ -1,5 +1,6 @@
 # base node image
 FROM node:10
+RUN apt-get install -y build-essential python3.6 python3-pip python3.6-venv
 
 WORKDIR /usr/src/app
 
